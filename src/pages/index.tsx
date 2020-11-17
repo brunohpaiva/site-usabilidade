@@ -5,6 +5,7 @@ import Card from "@material-ui/core/Card";
 import {makeStyles} from "@material-ui/core/styles";
 import Navbar from '../components/Navbar';
 import Jumbotron from '../components/Jumbotron';
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles(theme => ({
   gridContainer: {
@@ -26,7 +27,7 @@ export default function Home() {
       <Container className={classes.gridContainer}>
         <Grid container spacing={4}>
           {[...Array(30)].map((_, index) => (
-            <Grid item key={index} sm={2}>
+            <Grid item key={index} sm={3}>
               <Card>
                 fasfafaf
               </Card>
@@ -34,6 +35,7 @@ export default function Home() {
           ))}
         </Grid>
       </Container>
+      <Footer/>
     </div>
   )
 }
