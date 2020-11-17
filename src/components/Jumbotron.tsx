@@ -6,7 +6,10 @@ import {Typography} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   jumbotron: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6)
+    padding: theme.spacing(4, 0, 3),
+    [theme.breakpoints.up('sm')]: {
+      padding: theme.spacing(8, 0, 6),
+    }
   }
 }));
 
