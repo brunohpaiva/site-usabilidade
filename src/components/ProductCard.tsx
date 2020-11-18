@@ -1,5 +1,6 @@
 import React from "react";
 import NextLink from 'next/link';
+import NextImage from 'next/image';
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -14,7 +15,7 @@ interface ProductCardProps {
 
 const useStyles = makeStyles({
   cardMedia: {
-    paddingTop: '56.25%'
+    // paddingTop: '56.25%'
   }
 });
 
@@ -32,7 +33,9 @@ function ProductCard({product}: ProductCardProps) {
         <CardActionArea title={product.name}>
           <CardMedia
             className={classes.cardMedia}
+            component="img"
             image={product.image}
+            height={300}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">

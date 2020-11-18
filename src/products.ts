@@ -17,7 +17,7 @@ const products: Product[] = [
     id: 1,
     name: 'Camisa Preta',
     description: 'Camisa Preta',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-preta.jpg',
     price: 10.99,
     sale: true,
     new: false
@@ -26,7 +26,7 @@ const products: Product[] = [
     id: 2,
     name: 'Camisa Cinza',
     description: 'Camisa Cinza',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-cinza.jpg',
     price: 15,
     sale: false,
     new: false
@@ -35,7 +35,7 @@ const products: Product[] = [
     id: 3,
     name: 'Camisa Azul',
     description: 'Camisa Azul',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-azul.jpg',
     price: 13,
     sale: true,
     new: false
@@ -44,7 +44,7 @@ const products: Product[] = [
     id: 4,
     name: 'Camisa Verde',
     description: 'Camisa Verde',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-verde.jpg',
     price: 14,
     sale: true,
     new: false
@@ -53,7 +53,7 @@ const products: Product[] = [
     id: 5,
     name: 'Camisa Amarela',
     description: 'Camisa Amarela',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-amarela.jpg',
     price: 19,
     sale: false,
     new: false
@@ -62,7 +62,7 @@ const products: Product[] = [
     id: 6,
     name: 'Camisa Roxa',
     description: 'Camisa Roxa',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-roxa.jpg',
     price: 9.99,
     sale: false,
     new: true
@@ -71,61 +71,34 @@ const products: Product[] = [
     id: 7,
     name: 'Camisa Marrom',
     description: 'Camisa Marrom',
-    image: 'https://picsum.photos/200',
-    price: 7.99,
-    sale: false,
-    new: false
-  },
-  {
-    id: 8,
-    name: 'Tênis Preto',
-    description: 'Tênis Preto',
-    image: 'https://picsum.photos/200',
-    price: 7.99,
-    sale: false,
-    new: false
-  },
-  {
-    id: 9,
-    name: 'Tênis Branco',
-    description: 'Tênis Branco',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-marrom.jpg',
     price: 7.99,
     sale: false,
     new: false
   },
   {
     id: 10,
-    name: 'Camisa Marrom',
-    description: 'Camisa Marrom',
-    image: 'https://picsum.photos/200',
-    price: 7.99,
-    sale: false,
-    new: false
-  },
-  {
-    id: 11,
     name: 'Camisa Laranja',
     description: 'Camisa Laranja',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-laranja.jpg',
     price: 7.99,
     sale: false,
     new: true
   },
   {
-    id: 12,
+    id: 11,
     name: 'Camisa Azul Escuro',
     description: 'Camisa Azul Escuro',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-azul-escuro.jpg',
     price: 7.99,
     sale: false,
     new: false
   },
   {
-    id: 13,
+    id: 12,
     name: 'Camisa Branca',
     description: 'Camisa Branca',
-    image: 'https://picsum.photos/200',
+    image: '/products/camisa-branca.jpg',
     price: 7.99,
     sale: false,
     new: true
