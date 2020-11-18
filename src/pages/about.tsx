@@ -3,6 +3,7 @@ import Container from "@material-ui/core/Container";
 import {makeStyles} from "@material-ui/core/styles";
 import PageLayout from "../components/PageLayout";
 import Jumbotron from '../components/Jumbotron';
+import withSearch from "../withSearch";
 
 const useStyles = makeStyles(theme => ({
   gridContainer: {
@@ -32,4 +33,4 @@ function AboutPage() {
   )
 }
 
-export default AboutPage;
+export default withSearch(AboutPage);

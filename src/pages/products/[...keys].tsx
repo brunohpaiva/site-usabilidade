@@ -3,6 +3,7 @@ import Head from "next/head";
 import PageLayout from "../../components/PageLayout";
 import PageContent from "../../components/PageContent";
 import products, {Product, encodeProductName} from "../../products";
+import withSearch from "../../withSearch";
 
 interface ProductPageProps {
   product: Product;
@@ -15,7 +16,7 @@ function ProductPage({product}: ProductPageProps) {
         <title>{product.name} | MagesticStore</title>
       </Head>
 
-      <PageLayout>
+      <PageLayout showSearch={false}>
         <PageContent maxWidth="lg">
           produto page {product.name}
         </PageContent>
