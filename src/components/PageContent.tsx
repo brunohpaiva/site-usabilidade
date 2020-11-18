@@ -27,7 +27,6 @@ interface PageContentProps {
 
 function PageContent({children, maxWidth}: React.PropsWithChildren<PageContentProps>) {
   const classes = useStyles();
-  const width = maxWidth ?? "xl";
 
   return (
     <Container className={classes.gridContainer} maxWidth={maxWidth ?? "xl"}>

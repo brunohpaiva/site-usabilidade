@@ -1,15 +1,23 @@
 import React from "react";
 import Head from "next/head";
+import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
+import Typography from "@material-ui/core/Typography";
 import PageLayout from "../../components/PageLayout";
 import PageContent from "../../components/PageContent";
 import products, {Product, encodeProductName} from "../../products";
-import withSearch from "../../withSearch";
 
 interface ProductPageProps {
   product: Product;
 }
 
 function ProductPage({product}: ProductPageProps) {
+  const formattedPrice = product.price.toLocaleString("pt-BR", {
+    minimumFractionDigits: 2,
+    style: "currency",
+    currency: "BRL"
+  });
+
   return (
     <>
       <Head>
@@ -18,7 +26,24 @@ function ProductPage({product}: ProductPageProps) {
 
       <PageLayout showSearch={false}>
         <PageContent maxWidth="lg">
-          produto page {product.name}
+          <Grid container>
+            <Grid item xs={12} md={4}>
+              <img src={product.image} width="100%"/>
+            </Grid>
+            <Grid item xs={12} md={8}>
+              <Box paddingLeft={4}>
+                <Typography variant="h4" component="h4" gutterBottom>
+                  {product.name}
+                </Typography>
+                <Typography variant="subtitle1" component="p" gutterBottom>
+                  {product.description}
+                </Typography>
+                <Typography variant="h5" component="h5">
+                  {formattedPrice}
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
         </PageContent>
       </PageLayout>
     </>

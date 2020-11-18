@@ -9,11 +9,11 @@ import SearchResults from '../components/search/SearchResults';
 import SearchPagination from '../components/search/SearchPagination';
 import withSearch from "../withSearch";
 
-function SearchPage() {
+function SearchPage(props) {
   return (
     <>
       <Head>
-        <title>Pesquisa | MajesticStore</title>
+        <title>Pesquisa "{props.searchState.query}" | MajesticStore</title>
       </Head>
 
       <PageLayout>

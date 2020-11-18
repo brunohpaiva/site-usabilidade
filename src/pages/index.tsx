@@ -42,7 +42,7 @@ function IndexPage() {
 
       <PageLayout>
         <Jumbotron title="MajesticStore"
-                   subtitle="aaafasf fas fa fas fas fa fsa fa fa aaafasf fas fa fas fas fa fsa fa fa "/>
+                   subtitle="Loja online de camisas, entregas para todo o Brasil."/>
         <PageContent>
           <Section title="Novos">
             <ProductsGrid products={newProducts}/>
