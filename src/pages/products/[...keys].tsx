@@ -21,7 +21,7 @@ function ProductPage({product}: ProductPageProps) {
   return (
     <>
       <Head>
-        <title>{product.name} | MagesticStore</title>
+        <title>{product.name} | MajesticStore</title>
       </Head>
 
       <PageLayout showSearch={false}>

@@ -6,6 +6,7 @@ export interface Product {
   price: number;
   sale?: boolean;
   new?: boolean;
+  bestSeller?: boolean;
 }
 
 export function encodeProductName(name: string) {
@@ -20,7 +21,8 @@ const products: Product[] = [
     image: '/products/camisa-preta.jpg',
     price: 10.99,
     sale: true,
-    new: false
+    new: false,
+    bestSeller: false
   },
   {
     id: 2,
@@ -29,7 +31,8 @@ const products: Product[] = [
     image: '/products/camisa-cinza.jpg',
     price: 15,
     sale: false,
-    new: false
+    new: false,
+    bestSeller: true
   },
   {
     id: 3,
@@ -38,7 +41,8 @@ const products: Product[] = [
     image: '/products/camisa-azul.jpg',
     price: 13,
     sale: true,
-    new: false
+    new: false,
+    bestSeller: false
   },
   {
     id: 4,
@@ -47,7 +51,8 @@ const products: Product[] = [
     image: '/products/camisa-verde.jpg',
     price: 14,
     sale: true,
-    new: false
+    new: false,
+    bestSeller: false
   },
   {
     id: 5,
@@ -56,7 +61,8 @@ const products: Product[] = [
     image: '/products/camisa-amarela.jpg',
     price: 19,
     sale: false,
-    new: false
+    new: false,
+    bestSeller: true
   },
   {
     id: 6,
@@ -65,7 +71,8 @@ const products: Product[] = [
     image: '/products/camisa-roxa.jpg',
     price: 9.99,
     sale: false,
-    new: true
+    new: true,
+    bestSeller: false
   },
   {
     id: 7,
@@ -74,7 +81,8 @@ const products: Product[] = [
     image: '/products/camisa-marrom.jpg',
     price: 7.99,
     sale: false,
-    new: false
+    new: false,
+    bestSeller: false
   },
   {
     id: 10,
@@ -83,7 +91,8 @@ const products: Product[] = [
     image: '/products/camisa-laranja.jpg',
     price: 7.99,
     sale: false,
-    new: true
+    new: true,
+    bestSeller: false
   },
   {
     id: 11,
@@ -92,7 +101,8 @@ const products: Product[] = [
     image: '/products/camisa-azul-escuro.jpg',
     price: 7.99,
     sale: false,
-    new: false
+    new: false,
+    bestSeller: true
   },
   {
     id: 12,
@@ -101,7 +111,8 @@ const products: Product[] = [
     image: '/products/camisa-branca.jpg',
     price: 7.99,
     sale: false,
-    new: true
+    new: true,
+    bestSeller: false
   }
 ];
 
