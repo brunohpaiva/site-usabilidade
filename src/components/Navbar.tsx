@@ -47,7 +47,7 @@ function Navbar({showSearch}: NavbarProps) {
       <Container>
         <Toolbar disableGutters>
           <Typography variant="h6" color="inherit">
-            MagesticStore
+            MajesticStore
           </Typography>
           <div className={classes.buttons}>
             <ButtonLink href="/">Início</ButtonLink>

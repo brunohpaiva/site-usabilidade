@@ -20,13 +20,13 @@ function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact | MagesticStore</title>
+        <title>Contato | MajesticStore</title>
       </Head>
 
       <PageLayout>
-        <Jumbotron title="Contact"/>
+        <Jumbotron title="Contato"/>
         <Container className={classes.gridContainer} maxWidth="xl">
-          Contact
+          Contato
         </Container>
       </PageLayout>
     </>

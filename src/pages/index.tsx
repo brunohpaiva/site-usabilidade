@@ -37,11 +37,11 @@ function IndexPage() {
   return (
     <>
       <Head>
-        <title>Home | MagesticStore</title>
+        <title>Home | MajesticStore</title>
       </Head>
 
       <PageLayout>
-        <Jumbotron title="MagesticStore"
+        <Jumbotron title="MajesticStore"
                    subtitle="aaafasf fas fa fas fas fa fsa fa fa aaafasf fas fa fas fas fa fsa fa fa "/>
         <PageContent>
           <Section title="Novos">

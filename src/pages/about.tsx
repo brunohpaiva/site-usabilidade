@@ -20,13 +20,13 @@ function AboutPage() {
   return (
     <>
       <Head>
-        <title>About | MagesticStore</title>
+        <title>Sobre | MajesticStore</title>
       </Head>
 
       <PageLayout>
-        <Jumbotron title="About"/>
+        <Jumbotron title="Sobre"/>
         <Container className={classes.gridContainer} maxWidth="xl">
-          About
+          Sobre
         </Container>
       </PageLayout>
     </>
