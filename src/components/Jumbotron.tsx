@@ -13,18 +13,23 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Jumbotron() {
+interface JumbotronProps {
+  title: string;
+  subtitle?: string;
+}
+
+function Jumbotron({title, subtitle}: JumbotronProps) {
   const classes = useStyles();
 
   return (
     <div className={classes.jumbotron}>
       <Container maxWidth="sm">
-        <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-          Aaaa
+        <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom={!!subtitle}>
+          {title}
         </Typography>
-        <Typography variant="h5" align="center" color="textSecondary" paragraph>
-          fafasfasfasfa fas fa fa fsa fa f
-        </Typography>
+        {subtitle && <Typography component="p" variant="h5" align="center" color="textSecondary">
+          {subtitle}
+        </Typography>}
       </Container>
     </div>
   );

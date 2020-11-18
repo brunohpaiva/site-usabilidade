@@ -28,8 +28,8 @@ function ProductCard({product}: ProductCardProps) {
 
   return (
     <Card>
-      <NextLink href="/products/[id]" as={`/products/${product.id}/${encodeProductName(product.name)}`} passHref>
-        <CardActionArea>
+      <NextLink href="/products/[...keys]" as={`/products/${product.id}/${encodeProductName(product.name)}`} passHref>
+        <CardActionArea title={product.name}>
           <CardMedia
             className={classes.cardMedia}
             image={product.image}

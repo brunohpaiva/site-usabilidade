@@ -1,4 +1,7 @@
 import React from "react";
+import Head from "next/head";
+import PageLayout from "../../components/PageLayout";
+import PageContent from "../../components/PageContent";
 import products, {Product, encodeProductName} from "../../products";
 
 interface ProductPageProps {
@@ -7,9 +10,17 @@ interface ProductPageProps {
 
 function ProductPage({product}: ProductPageProps) {
   return (
-    <h1>
-      produto page {product.name}
-    </h1>
+    <>
+      <Head>
+        <title>{product.name} | MagesticStore</title>
+      </Head>
+
+      <PageLayout>
+        <PageContent maxWidth="lg">
+          produto page {product.name}
+        </PageContent>
+      </PageLayout>
+    </>
   );
 }
 

@@ -24,8 +24,8 @@ function Footer() {
       </Typography>
       <Typography variant="body2" color="textSecondary" align="center">
         Copyright &copy;&nbsp;
-        <Link color="inherit" href="https://material-ui.com/">
-          aaa
+        <Link color="inherit" href="https://site-usabilidade.bruno.codes/">
+          MagesticStore
         </Link>&nbsp;
         {year}
         {'.'}

@@ -1,43 +1,56 @@
+import React from "react";
 import Head from 'next/head';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import {makeStyles} from "@material-ui/core/styles";
-import Navbar from '../components/Navbar';
+import Typography from "@material-ui/core/Typography";
+import PageLayout from "../components/PageLayout";
+import PageContent from "../components/PageContent";
 import Jumbotron from '../components/Jumbotron';
-import Footer from '../components/Footer';
-import ProductCard from '../components/ProductCard';
+import ProductsGrid from "../components/ProductsGrid";
 import products from "../products";
+import {makeStyles} from "@material-ui/core/styles";
 
-const useStyles = makeStyles(theme => ({
-  gridContainer: {
-    padding: theme.spacing(4, 2, 4, 2),
-    [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(8, 4, 8, 4)
-    }
+const saleProducts = products.filter(product => typeof product.sale === "boolean" && product.sale);
+const newProducts = products.filter(product => typeof product.new === "boolean" && product.new);
+
+const sectionUseStyles = makeStyles(theme => ({
+  section: {
+    paddingBottom: theme.spacing(3)
   }
 }));
 
-function IndexPage() {
-  const classes = useStyles();
+function Section({title, children}: React.PropsWithChildren<{ title?: string; }>) {
+  const classes = sectionUseStyles();
+  return (
+    <section className={classes.section}>
+      {title && <Typography variant="h4" component="h3" gutterBottom>
+        {title}
+      </Typography>}
+      {children}
+    </section>
+  );
+}
 
+function IndexPage() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Home | MagesticStore</title>
       </Head>
 
-      <Navbar/>
-      <Jumbotron/>
-      <Container className={classes.gridContainer} maxWidth="xl">
-        <Grid container spacing={2}>
-          {products.map((product) => (
-            <Grid item key={product.id} xs={12} sm={6} md={4} lg={3} xl={2}>
-              <ProductCard product={product}/>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-      <Footer/>
+      <PageLayout>
+        <Jumbotron title="MagesticStore"
+                   subtitle="aaafasf fas fa fas fas fa fsa fa fa aaafasf fas fa fas fas fa fsa fa fa "/>
+        <PageContent>
+          <Section title="Novos">
+            <ProductsGrid products={newProducts}/>
+          </Section>
+          <Section title="Em promoção">
+            <ProductsGrid products={saleProducts}/>
+          </Section>
+          <Section title="Todos">
+            <ProductsGrid products={products}/>
+          </Section>
+        </PageContent>
+      </PageLayout>
     </>
   )
 }
