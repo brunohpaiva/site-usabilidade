@@ -5,7 +5,7 @@ import Footer from "./Footer";
 function PageLayout(props: React.PropsWithChildren<{}>) {
   return (
     <>
-      <Navbar/>
+      <Navbar showSearch/>
       {props.children}
       <Footer/>
     </>

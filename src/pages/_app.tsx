@@ -24,4 +24,4 @@ function MyApp(props: AppProps) {
   )
 }
 
-export default MyApp
+export default MyApp;

@@ -1,17 +1,12 @@
 import React from "react";
 import Head from 'next/head';
-import { Highlight } from "react-instantsearch-dom";
+import { Configure, Highlight, Hits, Pagination } from "react-instantsearch-dom";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import PageLayout from "../components/PageLayout";
 import PageContent from "../components/PageContent";
 import Jumbotron from '../components/Jumbotron';
-import ProductsGrid from "../components/ProductsGrid";
-import products from "../products";
 import withSearch from "../withSearch";
-
-const saleProducts = products.filter(product => typeof product.sale === "boolean" && product.sale);
-const newProducts = products.filter(product => typeof product.new === "boolean" && product.new);
 
 const sectionUseStyles = makeStyles(theme => ({
   section: {
@@ -41,18 +36,11 @@ function IndexPage() {
       </Head>
 
       <PageLayout>
-        <Jumbotron title="MagesticStore"
-                   subtitle="aaafasf fas fa fas fas fa fsa fa fa aaafasf fas fa fas fas fa fsa fa fa "/>
+        <Jumbotron title="Pesquisa"/>
         <PageContent>
-          <Section title="Novos">
-            <ProductsGrid products={newProducts}/>
-          </Section>
-          <Section title="Em promoção">
-            <ProductsGrid products={saleProducts}/>
-          </Section>
-          <Section title="Todos">
-            <ProductsGrid products={products}/>
-          </Section>
+          <Configure hitsPerPage={4} />
+          <Hits hitComponent={HitComponent} />
+          <Pagination />
         </PageContent>
       </PageLayout>
     </>
