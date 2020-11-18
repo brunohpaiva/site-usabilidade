@@ -9,7 +9,7 @@ export interface Product {
 }
 
 export function encodeProductName(name: string) {
-  return encodeURIComponent(name.replace(" ", "-").toLowerCase());
+  return encodeURIComponent(name.replace(/ /g, "-").toLowerCase());
 }
 
 const products: Product[] = [
