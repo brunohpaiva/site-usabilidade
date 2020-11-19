@@ -19,14 +19,20 @@ Criar um website utilizando os conceitos de usabilidade e acessibilidade, seguin
 
 ## Setup
 
-Instale as dependências:
+1. Instale as dependências:
 ```bash
 npm install
 # ou
 yarn install
 ```
 
-Execute o servidor de desenvolvimento:
+Copie o arquivo `default.env` e renomeie para `.env.local`. Neste arquivo, informe as keys do [Algolia](https://www.algolia.com/).
+```dotenv
+NEXT_PUBLIC_ALGOLIA_APP_ID=appid
+NEXT_PUBLIC_ALGOLIA_API_KEY=apikey
+```
+
+3. Execute o servidor de desenvolvimento:
 ```bash
 npm run dev
 # ou
