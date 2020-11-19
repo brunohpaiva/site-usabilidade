@@ -2,7 +2,7 @@ import algoliasearch from "algoliasearch/lite";
 import {withInstantSearch} from "next-instantsearch";
 import qs from 'qs';
 
-const searchClient = algoliasearch("2J7F87Z24O", "7c75b682eec1c37239805e5aae55cb80");
+const searchClient = algoliasearch(process.env.NEXT_PUBLIC_ALGOLIA_APP_ID, process.env.NEXT_PUBLIC_ALGOLIA_API_KEY);
 
 function withSearch(component: unknown, includeIndexName = true) {
   return withInstantSearch({
