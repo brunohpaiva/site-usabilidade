@@ -5,6 +5,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import Typography from "@material-ui/core/Typography";
+import {formatCurrency} from "../utils/formatting";
 import {Product, encodeProductName} from "../products";
 
 interface ProductCardProps {
@@ -12,12 +13,6 @@ interface ProductCardProps {
 }
 
 function ProductCard({product}: ProductCardProps) {
-  const formattedPrice = product.price.toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-    style: "currency",
-    currency: "BRL"
-  });
-
   return (
     <Card>
       <NextLink href="/products/[...keys]" as={`/products/${product.id}/${encodeProductName(product.name)}`} passHref>
@@ -32,7 +27,7 @@ function ProductCard({product}: ProductCardProps) {
               {product.name}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              {formattedPrice}
+              {formatCurrency(product.price)}
             </Typography>
           </CardContent>
         </CardActionArea>

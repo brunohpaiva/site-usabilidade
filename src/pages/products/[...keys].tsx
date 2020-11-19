@@ -5,6 +5,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import PageLayout from "../../components/PageLayout";
 import PageContent from "../../components/PageContent";
+import {formatCurrency} from "../../utils/formatting";
 import products, {Product, encodeProductName} from "../../products";
 
 interface ProductPageProps {
@@ -12,12 +13,6 @@ interface ProductPageProps {
 }
 
 function ProductPage({product}: ProductPageProps) {
-  const formattedPrice = product.price.toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-    style: "currency",
-    currency: "BRL"
-  });
-
   return (
     <>
       <Head>
@@ -39,7 +34,7 @@ function ProductPage({product}: ProductPageProps) {
                   {product.description}
                 </Typography>
                 <Typography variant="h5" component="h5">
-                  {formattedPrice}
+                  {formatCurrency(product.price)}
                 </Typography>
               </Box>
             </Grid>
